@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
-import { StyleSheet, View, Text, Dimensions, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Dimensions } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 import MapView, { PROVIDER_DEFAULT, Marker, Callout } from 'react-native-maps';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -11,6 +12,10 @@ const OrphanagesMap: React.FC = () => {
 
   const handleNavigateToOrphanageDetails = useCallback(() => {
     navigation.navigate('OrphanageDetails');
+  }, []);
+
+  const handleNavigateToCreateOrphanage = useCallback(() => {
+    navigation.navigate('SelectMapPosition');
   }, []);
 
   return (
@@ -27,7 +32,7 @@ const OrphanagesMap: React.FC = () => {
       >
         <Marker 
           icon={mapMarker} 
-          calloutAnchor={{ x: 2.7, y: 0.8 }}
+          calloutAnchor={{ x: 2.8, y: 0.8 }}
           coordinate={{
             latitude: -25.3972744, 
             longitude: -51.4678696,
@@ -44,9 +49,9 @@ const OrphanagesMap: React.FC = () => {
       <View style={styles.footer}>
         <Text style={styles.footerText}>2 orfanatos encontrados</Text>
 
-        <TouchableOpacity style={styles.createOrphanageButton} onPress={() => {}}>
+        <RectButton style={styles.createOrphanageButton} onPress={handleNavigateToCreateOrphanage}>
           <MaterialIcons name="add" size={20} color="#fff" />
-        </TouchableOpacity>
+        </RectButton>
       </View>
     </View>
   );
