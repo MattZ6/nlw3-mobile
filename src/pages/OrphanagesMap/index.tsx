@@ -4,7 +4,7 @@ import MapView, { PROVIDER_DEFAULT, Marker, Callout } from 'react-native-maps';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-import mapMarker from './src/assets/images/marker.png';
+import mapMarker from '../../assets/images/marker.png';
 
 const OrphanagesMap: React.FC = () => {
   const navigation = useNavigation();
