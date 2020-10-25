@@ -5,12 +5,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 const { Navigator, Screen } = createStackNavigator();
 
 import OrphanagesMap from './pages/OrphanagesMap';
-import OrphanageDetails from './pages/OrphanagesMap';
+import OrphanageDetails from './pages/OrphanageDetails';
 
 const Routes: React.FC = () => {
   return (
     <NavigationContainer>
-      <Navigator screenOptions={{ headerShown: true }}>
+      <Navigator screenOptions={{ headerShown: false }}>
         <Screen name="OrphanagesMap" component={OrphanagesMap} />
         <Screen name="OrphanageDetails" component={OrphanageDetails} />
       </Navigator>
