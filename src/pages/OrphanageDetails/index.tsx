@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
   },
 
   detailsContainer: {
-    padding: 24,
+    padding: 16,
+    paddingBottom: 32,
   },
 
   title: {
@@ -168,11 +169,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Nunito_600SemiBold',
     color: '#5c8599',
     lineHeight: 24,
-    marginTop: 16,
+    marginTop: 8,
   },
 
   mapContainer: {
-    borderRadius: 20,
+    borderRadius: 12,
     overflow: 'hidden',
     borderWidth: 1.2,
     borderColor: '#B3DAE2',
@@ -182,7 +183,7 @@ const styles = StyleSheet.create({
 
   mapStyle: {
     width: '100%',
-    height: 150,
+    height: 160,
   },
 
   routesContainer: {
@@ -197,10 +198,10 @@ const styles = StyleSheet.create({
   },
 
   separator: {
-    height: 0.8,
+    height: 0,
     width: '100%',
     backgroundColor: '#D3E2E6',
-    marginVertical: 40,
+    marginVertical: 16,
   },
 
   scheduleContainer: {
@@ -218,21 +219,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#E6F7FB',
     borderWidth: 1,
     borderColor: '#B3DAE2',
-    borderRadius: 20,
+    borderRadius: 12,
   },
 
   scheduleItemGreen: {
     backgroundColor: '#EDFFF6',
     borderWidth: 1,
     borderColor: '#A1E9C5',
-    borderRadius: 20,
+    borderRadius: 12,
   },
 
   scheduleItemRed: {
     backgroundColor: '#FEF6F9',
     borderWidth: 1,
     borderColor: '#FFBCD4',
-    borderRadius: 20,
+    borderRadius: 12,
   },
 
   scheduleText: {
@@ -256,7 +257,7 @@ const styles = StyleSheet.create({
 
   contactButton: {
     backgroundColor: '#3CDC8C',
-    borderRadius: 20,
+    borderRadius: 12,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { ScrollView, View, StyleSheet, Switch, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
@@ -93,8 +93,20 @@ const OrphanageData: React.FC = () => {
     images,
   ]);
 
+  const imagesLabel = useMemo(() => {
+    if(!images.length){
+      return 'Fotos';
+    }
+
+    if(images.length === 1) {
+      return '1 foto';
+    }
+
+    return `${images.length} fotos`;
+  }, [images]);
+
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding: 24 }}>
+    <ScrollView style={styles.container} contentContainerStyle={{ padding: 16, paddingBottom: 32, }}>
       <Text style={styles.title}>Dados</Text>
 
       <Text style={styles.label}>Nome</Text>
@@ -117,13 +129,13 @@ const OrphanageData: React.FC = () => {
         style={styles.input}
       />
 
-      <Text style={styles.label}>Fotos</Text>
+      <Text style={styles.label}>{imagesLabel}</Text>
 
-      <View style={styles.uploadedImagesContainer}>
+      <ScrollView style={styles.uploadedImagesContainer} horizontal showsHorizontalScrollIndicator={false}>
         { images.map(image => (
           <Image key={image} source={{uri:image}} style={styles.upladedImage} />
         )) }
-      </View>
+      </ScrollView>
 
       <TouchableOpacity style={styles.imagesInput} onPress={handleSelectImages}>
         <Feather name="plus" size={24} color="#15B6D6" />
@@ -150,7 +162,7 @@ const OrphanageData: React.FC = () => {
         <Text style={styles.label}>Atende final de semana?</Text>
         <Switch 
           thumbColor="#fff" 
-          trackColor={{ false: '#ccc', true: '#39CC83' }}
+          trackColor={{ false: '#ccc', true: '#15c3d6' }}
           value={open_on_weekends}
           onValueChange={setOpenOnWeekends}
         />
@@ -172,16 +184,15 @@ const styles = StyleSheet.create({
     color: '#5c8599',
     fontSize: 24,
     fontFamily: 'Nunito_700Bold',
-    marginBottom: 32,
-    paddingBottom: 24,
-    borderBottomWidth: 0.8,
+    marginBottom: 24,
     borderBottomColor: '#D3E2E6'
   },
 
   label: {
     color: '#8fa7b3',
     fontFamily: 'Nunito_600SemiBold',
-    marginBottom: 8,
+    marginBottom: 4,
+    paddingHorizontal: 4,
   },
 
   comment: {
@@ -193,9 +204,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderWidth: 1.4,
     borderColor: '#d3e2e6',
-    borderRadius: 20,
+    borderRadius: 12,
     height: 56,
-    paddingVertical: 18,
+    paddingVertical: 16,
     paddingHorizontal: 24,
     marginBottom: 16,
     textAlignVertical: 'top',
@@ -203,14 +214,13 @@ const styles = StyleSheet.create({
 
   uploadedImagesContainer: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    marginBottom: 24,
   },
 
   upladedImage: {
     width: 64,
     height: 64,
-    borderRadius: 20,
-    marginBottom: 32,
+    borderRadius: 12,
     marginRight: 8,
   },
 
@@ -219,7 +229,7 @@ const styles = StyleSheet.create({
     borderStyle: 'dashed',
     borderColor: '#96D2F0',
     borderWidth: 1.4,
-    borderRadius: 20,
+    borderRadius: 12,
     height: 56,
     justifyContent: 'center',
     alignItems: 'center',
@@ -235,7 +245,7 @@ const styles = StyleSheet.create({
 
   nextButton: {
     backgroundColor: '#15c3d6',
-    borderRadius: 20,
+    borderRadius: 12,
     justifyContent: 'center',
     alignItems: 'center',
     height: 56,

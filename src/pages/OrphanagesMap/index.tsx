@@ -77,7 +77,7 @@ const OrphanagesMap: React.FC = () => {
           >
             <Callout tooltip onPress={() => handleNavigateToOrphanageDetails(orphanage.id)}>
               <View style={styles.calloutContainer}>
-                <Text style={styles.calloutTitle}>{orphanage.title}</Text>
+                <Text style={styles.calloutTitle} numberOfLines={1}>{orphanage.title}</Text>
               </View>
             </Callout>
           </Marker>
@@ -105,10 +105,10 @@ const styles = StyleSheet.create({
   },
   calloutContainer: {
     width: 160,
-    height: 46,
+    height: 48,
     paddingHorizontal: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    borderRadius: 16,
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    borderRadius: 12,
     justifyContent: 'center',
   },
   calloutTitle: {
@@ -122,8 +122,8 @@ const styles = StyleSheet.create({
     bottom: 24,
     left: 24,
     backgroundColor: '#fff',
-    borderRadius: 20,
-    height: 46,
+    borderRadius: 12,
+    height: 48,
     paddingLeft: 24,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   createOrphanageButton: {
     width: 56,
     height: 56,
-    borderRadius: 20,
+    borderRadius: 16,
     backgroundColor: '#15c3d6',
     alignItems: 'center',
     justifyContent: 'center',
