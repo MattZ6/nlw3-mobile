@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
 
   nextButton: {
     backgroundColor: '#15c3d6',
-    borderRadius: 20,
+    borderRadius: 12,
     justifyContent: 'center',
     alignItems: 'center',
     height: 56,
@@ -69,7 +69,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 24,
     right: 24,
-    bottom: 40,
+    bottom: 32,
+
+    elevation: 3,
   },
 
   nextButtonText: {

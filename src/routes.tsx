@@ -14,7 +14,7 @@ import Header from './components/Header';
 const Routes: React.FC = () => {
   return (
     <NavigationContainer>
-      <Navigator screenOptions={{ headerShown: false, cardStyle: { backgroundColor: '#f2f3f5' } }}>
+      <Navigator screenOptions={{ headerShown: false, cardStyle: { backgroundColor: '#f8f8f8' } }}>
         <Screen name="OrphanagesMap" component={OrphanagesMap} />
         <Screen name="OrphanageDetails" options={{ headerShown: true, header: () => <Header title="Orfanato" showCancel={false} /> }} component={OrphanageDetails} />
         <Screen name="SelectMapPosition" options={{ headerShown: true, header: () => <Header title="Selecione no mapa" /> }} component={SelectMapPosition} />
