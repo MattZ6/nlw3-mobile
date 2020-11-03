@@ -4646,6 +4646,11 @@ react-native-safe-area-context@3.1.4:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.1.4.tgz#9b7f883a5ae8da6218d17467a350434005893602"
   integrity sha512-bXx3hqz4LovFoMnJIRGIWL2oJ/PHadXviBKvgZV9yNErtURQLJSn0yfQytVtiqslhaBMZOJwH4R6HiClyofvBg==
 
+react-native-safe-area-context@3.1.8:
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.1.8.tgz#7a9883aa0f38f9c77d4bef2b89e4e285bc1024a3"
+  integrity sha512-9gUlsDZ96QwT9AKzA6aVWM/NX5rlJgauZ9HgCDVzKbe29UQYT1740QJnnaI2GExmkFGp6o7ZLNhCXZW95eYVFA==
+
 react-native-screens@2.12.0:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.12.0.tgz#579b7a6f99b3dd777ef4a447682e46f10ce9f5eb"
