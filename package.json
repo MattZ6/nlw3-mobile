@@ -10,8 +10,8 @@
   "dependencies": {
     "@expo-google-fonts/nunito": "0.1.0",
     "@react-native-community/masked-view": "0.1.10",
-    "@react-navigation/native": "5.8.0",
-    "@react-navigation/stack": "5.10.0",
+    "@react-navigation/native": "5.8.4",
+    "@react-navigation/stack": "5.12.1",
     "axios": "0.21.0",
     "expo": "39.0.3",
     "expo-font": "8.3.0",
